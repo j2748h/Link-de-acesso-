@@ -1,0 +1,6 @@
+{
+  "name": "Página de Obrigado",
+  "description": "Página de agradecimento pela compra com botão para baixar o e-book, design moderno e animações suaves.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
