@@ -59,68 +59,8 @@ export default function App() {
   };
 
   const triggerLocalDownload = () => {
-    const fileContent = `===============================================================
-ALIMENTAÇÃO INTELIGENTE: COMO EU PERDI 158 KG EM 9 MESES
-===============================================================
-O Guia Prático Para Emagrecer Gastando Pouco
-
-CONTEÚDO DO SEU E-BOOK COMPLETO:
-
----------------------------------------------------------------
-SUMÁRIO
----------------------------------------------------------------
-Introdução .................................................... Pág. 4
-Capítulo 1 – Descubra Como Você se Alimenta Hoje ............... Pág. 6
-Capítulo 2 – Organize Sua Alimentação .......................... Pág. 9
-Capítulo 3 – Plano Simples para Perder Peso .................... Pág. 13
-Capítulo 4 – 10 Exercícios Fáceis Para Fazer em Casa ........... Pág. 17
-Capítulo 5 – Como Dormir Melhor e Recuperar Seu Corpo ......... Pág. 22
-Capítulo 6 – Alimentos que Ajudam na Saciedade e Energia ...... Pág. 25
-Capítulo 7 – Estratégias de Pessoas Altamente Disciplinadas .... Pág. 29
-Capítulo 8 – Plano de 30 Dias .................................. Pág. 32
-Conclusão ..................................................... Pág. 38
-
----------------------------------------------------------------
-DEDICATÓRIA
----------------------------------------------------------------
-Este e-book nasceu de uma observação simples: minha família merecia comer melhor.
-Vi minha mãe chegando cansada do trabalho, meu pai pedindo lanche porque 'não tinha nada fácil na geladeira', e meus irmãos vivendo de macarrão instantâneo. Senti que podia mudar isso.
-
-Então comecei a pesquisar, testar receitas, estudar nutrição básica e organizar tudo o que aprendi neste guia. Não sou nutricionista, nem médico — sou um filho que quis ajudar.
-Se este material ajudar a sua família a comer melhor sem gastar mais, já valeu cada hora de pesquisa.
-
----------------------------------------------------------------
-INTRODUÇÃO
----------------------------------------------------------------
-O que você vai aprender:
-Emagrecer com saúde sem esvaziar o bolso. Parece difícil? Garanto que não é — e este guia vai te provar isso página por página.
-Aqui você vai encontrar orientações práticas sobre alimentação equilibrada, exercícios que qualquer pessoa pode fazer em casa, estratégias de sono e um plano completo de 30 dias. Tudo explicado de forma simples, sem tecnicismos e sem exigir nenhum investimento alto.
-
----------------------------------------------------------------
-MÉTODO DO PRATO SAUDÁVEL
----------------------------------------------------------------
-- METADE DO PRATO → Verduras e Legumes (alface, tomate, cenoura, pepino, beterraba, brócolis, couve...)
-- UM QUARTO DO PRATO → Carboidrato de qualidade (arroz, batata, mandioca, macarrão, batata-doce)
-- UM QUARTO DO PRATO → Proteína (frango, ovo, peixe, feijão, lentilha, carne magra)
-- + 1 copo d'água em cada refeição
-- + 1 fruta como sobremesa (natural, não em calda)
-
----------------------------------------------------------------
-LISTA DE COMPRAS ECONÔMICA (Hortifrúti e Mercearia)
----------------------------------------------------------------
-- Banana (1 cacho), Laranja ou maçã (1 kg), Alface (1 pé), Tomate (1 kg), Cenoura (1 kg), Chuchu ou abobrinha, Batata-doce (1 kg)
-- Arroz (2 kg), Feijão (1 kg), Aveia em flocos (500g), Ovos (1 dúzia), Frango (1 kg), Pão integral (1 pacote), Iogurte natural (2 unidades)
-
-Obrigado pela sua confiança! Nos vemos na nova vida saudável.`;
-    const blob = new Blob([fileContent], { type: 'text/plain;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `Alimentação Inteligente Como Eu Perde 158 kg Em 9 Meses.txt`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+    // Redireciona o usuário diretamente para a pasta segura no Google Drive com o PDF completo
+    window.location.href = "https://drive.google.com/drive/folders/1w8cHs8Jf5SY-q5ned5UQ9rao5hv5Fv-I";
   };
 
   return (
@@ -186,7 +126,7 @@ Obrigado pela sua confiança! Nos vemos na nova vida saudável.`;
             transition={{ delay: 0.2 }}
             className="text-slate-500 text-base md:text-lg max-w-xl mx-auto mt-3"
           >
-            Seu pagamento foi confirmado com êxito. Clique no botão abaixo para baixar seu e-book instantaneamente.
+            Seu pagamento foi confirmado com êxito. Clique no botão abaixo para acessar seu e-book instantaneamente.
           </motion.p>
         </header>
 
@@ -217,7 +157,7 @@ Obrigado pela sua confiança! Nos vemos na nova vida saudável.`;
           </p>
 
           <p className="text-slate-500 text-sm mt-4 max-w-md">
-            Clique abaixo para baixar o seu e-book oficial com o método completo que transformou vidas de forma prática e barata.
+            Clique abaixo para acessar o seu e-book oficial com o método completo que transformou vidas de forma prática e barata.
           </p>
 
           {/* THE ONLY PEGAR E-BOOK BUTTON */}
@@ -291,9 +231,9 @@ Obrigado pela sua confiança! Nos vemos na nova vida saudável.`;
               </div>
 
               <h3 className="text-slate-900 font-bold font-display text-lg">
-                Preparando Download...
+                Preparando Acesso Seguro...
               </h3>
-              <p className="text-slate-400 text-xs mt-1">O seu e-book está sendo compilado com segurança.</p>
+              <p className="text-slate-400 text-xs mt-1">Conectando você de forma segura à pasta do Google Drive.</p>
 
               {/* Progress bar line */}
               <div className="mt-5 w-full bg-slate-100 rounded-full h-2 overflow-hidden">
@@ -327,18 +267,21 @@ Obrigado pela sua confiança! Nos vemos na nova vida saudável.`;
               <CheckCircle className="w-5 h-5" />
             </div>
             <div className="flex-1 text-left min-w-0">
-              <h5 className="font-bold text-xs text-white">Download Iniciado!</h5>
-              <p className="text-slate-400 text-[10px] mt-0.5 truncate">O arquivo PDF está sendo salvo no seu navegador.</p>
+              <h5 className="font-bold text-xs text-white">Redirecionando!</h5>
+              <p className="text-slate-400 text-[10px] mt-0.5 truncate">Enviando você ao Google Drive...</p>
             </div>
-            <button 
+            <a 
+              href="https://drive.google.com/drive/folders/1w8cHs8Jf5SY-q5ned5UQ9rao5hv5Fv-I"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => {
                 setDownloadStep('idle');
                 setProgress(0);
               }}
-              className="text-white hover:text-emerald-400 text-[10px] font-extrabold uppercase bg-slate-800 hover:bg-slate-700 px-2.5 py-1.5 rounded-lg transition-all shrink-0"
+              className="text-white hover:text-emerald-400 text-[10px] font-extrabold uppercase bg-emerald-600 hover:bg-emerald-500 px-3 py-1.5 rounded-lg transition-all shrink-0"
             >
-              Fechar
-            </button>
+              Ir Agora
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
